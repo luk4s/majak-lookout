@@ -5,10 +5,12 @@
 <script>
   export default {
     name: "PlayVideo",
-    el: "play_button",
     methods: {
       play: function (event) {
         let videoEl = event.target.previousElementSibling;
+        if (!videoEl)
+          return;
+
         if (videoEl.requestFullscreen) {
           videoEl.requestFullscreen();
         } else if (videoEl.mozRequestFullScreen) {
@@ -23,21 +25,6 @@
         };
         videoEl.load();videoEl.play()
 
-      }
-    },
-    data() {
-      return {
-        sources: [
-          {
-            filename: "100m",
-            title : 'Z výšky 100m',
-          },
-          {
-            filename: "150m",
-            title : 'Z výšky 150m',
-          },
-
-        ]
       }
     }
   }

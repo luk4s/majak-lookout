@@ -7,3 +7,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+.majak-view {
+  .video-wrapper {
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.25);
+  }
+}
