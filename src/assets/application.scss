@@ -1,0 +1,9 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-vue/src/index.scss";
+
+body {
+  background-image: url("./background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
