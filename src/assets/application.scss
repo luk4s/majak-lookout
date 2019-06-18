@@ -5,7 +5,10 @@ body {
   background-image: url("./background.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
+}
+header {
+  text-shadow: #fff 0 0 10px;
 }
 .majak-view {
   .video-wrapper {
