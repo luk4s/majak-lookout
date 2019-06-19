@@ -1,13 +1,12 @@
 <template>
-  <a id="play_button" v-on:click="play" class="stretched-link"></a>
+  <a id="play_button" v-on:click="play($event.target.previousElementSibling)" class="stretched-link"></a>
 </template>
 
 <script>
   export default {
     name: "PlayVideo",
     methods: {
-      play(event) {
-        let videoEl = event.target.previousElementSibling;
+      play(videoEl) {
         if (!videoEl)
           return;
 
