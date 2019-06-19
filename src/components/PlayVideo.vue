@@ -6,25 +6,21 @@
   export default {
     name: "PlayVideo",
     methods: {
-      play: function (event) {
+      play(event) {
         let videoEl = event.target.previousElementSibling;
         if (!videoEl)
           return;
 
         if (videoEl.requestFullscreen) {
           videoEl.requestFullscreen();
-        } else if (videoEl.mozRequestFullScreen) {
-          videoEl.mozRequestFullScreen();
-        } else if (videoEl.webkitRequestFullscreen) {
-          videoEl.webkitRequestFullscreen();
-        } else if (videoEl.msRequestFullscreen) {
-          videoEl.msRequestFullscreen();
         }
         videoEl.onended = () => {
-          document.exitFullscreen()
+          if (document.exitFullscreen) {
+            document.exitFullscreen()
+          }
         };
-        videoEl.load();videoEl.play()
-
+        videoEl.load();
+        videoEl.play()
       }
     }
   }
