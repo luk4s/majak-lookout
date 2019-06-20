@@ -12,14 +12,22 @@ describe('PlayVideo.vue', () => {
   it('play()', () => {
     const wrapper = shallowMount(PlayVideo, {});
 
-    let spy = {
+    let videoEl = {
       requestFullscreen: jest.fn(),
       load: jest.fn(),
       play: jest.fn(),
     };
+    let spy = {
+      parentElement: {
+        querySelector: () => {
+          return videoEl
+        },
+      }
+    };
+
     wrapper.vm.play(spy);
-    expect(spy.load).toHaveBeenCalled()
-    expect(spy.play).toHaveBeenCalled()
+    expect(videoEl.load).toHaveBeenCalled();
+    expect(videoEl.play).toHaveBeenCalled()
   })
 
 })
