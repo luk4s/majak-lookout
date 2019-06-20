@@ -6,26 +6,33 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
-  color: #fff;
-  text-shadow: 0 0 5px #000;
+  //color: #fff;
+  //text-shadow: 0 0 5px #000;
 }
 
 $lead_background: rgba(255, 255, 255, 0.7);
 header {
-  color: $body-color;
-  text-shadow: none;
+  //color: $body-color;
+  //text-shadow: none;
   background: $lead_background;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.75) 60%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.75) 80%, rgba(255, 255, 255, 0) 100%);
 }
-
+$video_height: 80px;
 .majak-view {
   .video-wrapper {
     cursor: pointer;
   }
+  .row {
+    background-color: $lead_background;
+  }
+  h4 {
+    line-height: $video_height;
+  }
 }
 
 video {
-  width: 80%;
+  //width: 40%;
+  height: $video_height;
 }
 
 footer {

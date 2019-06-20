@@ -1,14 +1,14 @@
 <template>
   <div id="majak" class="text-center">
     <header>
-      <div class="jumbotron bg-transparent">
+      <div class="pb-3">
         <h1>Rozhledna Bežerovice
           <small class="text-muted">– nejvyšší výhled v České republice</small>
         </h1>
         <p class="lead">
           První bezbariérová interaktivní rozhledna s možností cestování v čase. Zde Vás neohrozí ani mlha, ani déšť
         </p>
-        <p class="lead py-10">Prosíme, vyberte si roční období nebo výšku výhledu poklepáním</p>
+        <p class="lead">Prosíme, vyberte si roční období nebo výšku výhledu poklepáním</p>
       </div>
     </header>
 
@@ -17,14 +17,21 @@
       <div class="col-6"><h3>Roční období</h3></div>
     </div>
     <div class="row">
-      <div :key="index" class="col-6 majak-view" v-for="(item, index) in sources">
-        <div class="position-static my-4 video-wrapper">
-          <h4 class="mt-0">{{item.title}}</h4>
-          <video :src="`/videos/${item.filename}.MP4`"
-                 :poster="`/videos/thumbnails/${item.filename}.png`"></video>
+      <div :key="index" class="col-6 my-1 majak-view" v-for="(item, index) in sources">
+        <div class="border video-wrapper container border-right-0 border-left-0">
+          <div class="row">
+            <div class="col-sm-6">
+              <h4 class="m-0">{{item.title}}</h4>
+            </div>
+            <div class="col-sm-6">
+              <video :src="`/videos/${item.filename}.MP4`"
+                     :poster="`/videos/thumbnails/${item.filename}.png`"></video>
+            </div>
+          </div>
           <PlayVideo></PlayVideo>
         </div>
       </div>
+
     </div>
 
     <footer>
