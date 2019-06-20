@@ -1,4 +1,7 @@
 # majak
+http://bezerovice.cz
+
+[![Build Status](https://travis-ci.org/luk4s/majak-lookout.svg?branch=master)](https://travis-ci.org/luk4s/majak-lookout)
 
 ## Project setup
 ```
