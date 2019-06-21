@@ -17,7 +17,7 @@
       <div class="col-6"><h3>Roční období</h3></div>
     </div>
     <div class="row">
-      <div :key="index" class="col-6 my-1 majak-view" v-for="(item, index) in sources">
+      <div :key="index" class="col-6 my-3 majak-view" v-for="(item, index) in sources">
         <div class="border video-wrapper container border-right-0 border-left-0">
           <div class="row">
             <div class="col-sm-6">
