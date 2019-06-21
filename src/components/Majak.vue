@@ -24,7 +24,7 @@
               <h4 class="m-0">{{item.title}}</h4>
             </div>
             <div class="col-sm-6">
-              <video :src="`./videos/${item.filename}.MP4`"
+              <video :src="`./videos/${item.filename}.mp4`"
                      :poster="`./videos/thumbnails/${item.filename}.png`"></video>
             </div>
           </div>
